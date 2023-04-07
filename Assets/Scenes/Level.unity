@@ -981,6 +981,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1577444296495234668, guid: ff30f61a892ae43828ac4173c5359e2f, type: 3}
+      propertyPath: m_Constraints
+      value: 64
+      objectReference: {fileID: 0}
     - target: {fileID: 6036575119219248163, guid: ff30f61a892ae43828ac4173c5359e2f, type: 3}
       propertyPath: m_Name
       value: Worm and Camera
