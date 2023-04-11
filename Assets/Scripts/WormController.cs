@@ -82,8 +82,8 @@ public class WormController : MonoBehaviour
 			other.gameObject.SetActive (false);
 
             // Rotate player and camera
-            //RotateWormAndCamera();
             StartCoroutine(RotateWormAndCamera());
+            Camera.main.GetComponent<CameraController>().RotateAroundWorm();
             
             objectiveText.text = "Objective: Bring the sugar back to your neighbor!";
 
@@ -97,14 +97,8 @@ public class WormController : MonoBehaviour
 		countText.text = "Collectables: " + count.ToString();
 	} // end SetCountText
 
-    // void RotateWormAndCamera()
-    // {
-    //     _camera.transform.RotateAround(wormAndCamera.transform.position, new Vector3(0, 1, 0), 180 * Time.deltaTime);
-    // }
-
     IEnumerator RotateWormAndCamera()
     {
-
         rotating = true;
         float timeElapsed = 0;
         Quaternion startRotation = wormAndCamera.transform.rotation;
@@ -112,16 +106,11 @@ public class WormController : MonoBehaviour
         while (timeElapsed < lerpDuration)
         {
             wormAndCamera.transform.rotation = Quaternion.Slerp(startRotation, targetRotation, timeElapsed / lerpDuration);
-            //_camera.transform.position = Vector3.Lerp(_camera.transform.position, _camera.transform.position + new Vector3(0, 0, 30), Time.deltaTime);
             timeElapsed += Time.deltaTime;
-            _camera.transform.position = Vector3.Lerp(_camera.transform.position, new Vector3(_camera.transform.position.x, _camera.transform.position.y, _camera.transform.position.z + 30), 0.125f);
             yield return null;
         }
         wormAndCamera.transform.rotation = targetRotation;
         rotating = false;
-
-        // Vector3 lerpPosition = Vector3.Lerp(_camera.transform.position, new Vector3(_camera.transform.position.x, _camera.transform.position.y, _camera.transform.position.z + 30), 0.125f);
-        // _camera.transform.position = lerpPosition;
     }
 } // end WormController
 

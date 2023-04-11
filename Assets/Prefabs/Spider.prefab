@@ -159,6 +159,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: PointOfView
       objectReference: {fileID: 0}
+    - target: {fileID: 8112070615020645163, guid: 9f6c79438416d4113a5287fec45f6bde, type: 3}
+      propertyPath: m_Radius
+      value: 0.8858223
+      objectReference: {fileID: 0}
+    - target: {fileID: 8112070615020645163, guid: 9f6c79438416d4113a5287fec45f6bde, type: 3}
+      propertyPath: m_Center.x
+      value: -0.226621
+      objectReference: {fileID: 0}
+    - target: {fileID: 8112070615020645163, guid: 9f6c79438416d4113a5287fec45f6bde, type: 3}
+      propertyPath: m_Center.y
+      value: 9.737212e-16
+      objectReference: {fileID: 0}
+    - target: {fileID: 8112070615020645163, guid: 9f6c79438416d4113a5287fec45f6bde, type: 3}
+      propertyPath: m_Center.z
+      value: -0.11935135
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9f6c79438416d4113a5287fec45f6bde, type: 3}
 --- !u!4 &2282160863640031158 stripped
