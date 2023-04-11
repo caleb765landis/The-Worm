@@ -21,7 +21,7 @@ public class WormController : MonoBehaviour
     // Pickups
     private AudioSource pickupSound;
     private int count;
-    private bool hasObjective;
+    public bool hasObjective = false;
 
     void Start()
     {
@@ -82,10 +82,14 @@ public class WormController : MonoBehaviour
 			other.gameObject.SetActive (false);
 
             // Rotate player and camera
-            StartCoroutine(RotateWormAndCamera());
+            //StartCoroutine(RotateWormAndCamera());
+            wormAndCamera.transform.Rotate(new Vector3(0, 180, 0));
             Camera.main.GetComponent<CameraController>().RotateAroundWorm();
+            wormAndCamera.transform.position = other.gameObject.transform.position;
             
             objectiveText.text = "Objective: Bring the sugar back to your neighbor!";
+
+            hasObjective = true;
 
 			// Play pickup sound.
 			pickupSound.Play();
