@@ -25,6 +25,8 @@ public class WormController : MonoBehaviour
 
     void Start()
     {
+        // wormAndCamera.transform.position = new Vector3(490,0,927);
+
         //Set Cursor to not be visible and lock its position
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
@@ -85,7 +87,7 @@ public class WormController : MonoBehaviour
             //StartCoroutine(RotateWormAndCamera());
             wormAndCamera.transform.Rotate(new Vector3(0, 180, 0));
             Camera.main.GetComponent<CameraController>().RotateAroundWorm();
-            wormAndCamera.transform.position = other.gameObject.transform.position;
+            transform.position = new Vector3(500, 0, 590);
             
             objectiveText.text = "Objective: Bring the sugar back to your neighbor!";
 

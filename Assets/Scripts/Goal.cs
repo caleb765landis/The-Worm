@@ -10,7 +10,6 @@ public class Goal : MonoBehaviour
     public TextMeshProUGUI imageCanvasGroup;
 
     bool m_IsPlayerAtExit;
-    bool m_IsPlayerCaught;
     float m_Timer;
     bool m_HasAudioPlayed;
     
@@ -20,7 +19,6 @@ public class Goal : MonoBehaviour
         {
             if (other.gameObject.GetComponent<WormController>().hasObjective)
             {
-                // print("hello");
                 m_IsPlayerAtExit = true;
             }
         }
@@ -49,7 +47,9 @@ public class Goal : MonoBehaviour
             }
             else
             {
-                print("quit");
+                #if UNITY_EDITOR
+                    UnityEditor.EditorApplication.isPlaying = false;
+                #endif
                 Application.Quit ();
             }
         }

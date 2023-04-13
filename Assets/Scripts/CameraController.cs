@@ -28,15 +28,9 @@ public class CameraController : MonoBehaviour
 
     public void RotateAroundWorm()
     {
-        // StartCoroutine(MoveCamera());
-        // Vector3 flippedOffset = Vector3.Lerp(transform.position, new Vector3(transform.position.x, transform.position.y, transform.position.z + 30), 0.125f);
         flippedOffset = new Vector3(0, 0, -30);
+        transform.position = new Vector3(500, 0, 590) + offset + flippedOffset;
         
     }
-
-    // IEnumerator MoveCamera()
-    // {
-    //     Vector3 flippedOffset = Vector3.Lerp(transform.position, new Vector3(transform.position.x, transform.position.y, transform.position.z + 30), 0.125f);
-    // }
 }
 
