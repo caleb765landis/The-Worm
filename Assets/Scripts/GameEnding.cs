@@ -17,7 +17,7 @@ public class GameEnding : MonoBehaviour
     {
         if (other.gameObject == player)
         {
-            m_IsPlayerAtExit = true;
+            // m_IsPlayerAtExit = true;
         }
     }
 
@@ -55,7 +55,7 @@ public class GameEnding : MonoBehaviour
         {
             if (doRestart)
             {
-                SceneManager.LoadScene (0);
+                SceneManager.LoadScene (1);
             }
             else
             {

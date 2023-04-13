@@ -49,6 +49,7 @@ public class Goal : MonoBehaviour
             }
             else
             {
+                print("quit");
                 Application.Quit ();
             }
         }
