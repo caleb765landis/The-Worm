@@ -12,3 +12,10 @@ This project is a prototype game created for my _Intermediate Game Design and De
 The game can be built in the Unity Editor for either MacOS or Windows. The game was originally designed to be played with the alt-controller described above, where turning the record counter-clockwise would result in the worm moving forward and left and turning it clockwise would move the worm forward and right. Since the worm cannot move straight, you are supposed to "wiggle" the worm to move it. The same wiggle motion can be recreated by moving a mouse up and down.
 
 The gameplay is very simple. Your neighbor (who is also a worm) has run out of sugar and has asked you for some. It turns out you also do not have any sugar, but you already told your neighbor you would get them some. Your goal is to wiggle your way to the other side of the map to pick up some sugar and then bring it back to your neighbor. Try not to get caught by any spiders, or you'll have to start over! See how many pickups you can collect along the way, too!
+
+## Screenshots
+![Gameplay 1](./Gameplay1.png)
+
+![Gameplay 2](./Gameplay2.png)
+
+![Gameplay 3](./Gameplay3.png)
